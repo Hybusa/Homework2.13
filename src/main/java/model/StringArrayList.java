@@ -164,7 +164,7 @@ public class StringArrayList implements StringList {
     @Override
     public String[] toArray() {
         String[] result = new String[this.stringArray.length];
-        for(int i = 0; i < result.length; i++) result[i] = this.stringArray[i];
+        System.arraycopy(this.stringArray, 0, result, 0, result.length);
         return result;
     }
 
